@@ -77,9 +77,9 @@ Trois répertoires :
 * `front-public` pour la partie visiteur
 * `front-admin` pour la partie admin
 
-N'oublie pas d'utiliser ESLint !! Pour l'installer en global :
+N'oublie pas d'utiliser ESLint ! Pour l'installer en global (*éventuellement* précédé de `sudo`, suivant comment Node.js a été installé initialement) :
 
-    sudo npm install -g eslint
+    npm install -g eslint
 
 ## Par où commencer ?
 
