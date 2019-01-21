@@ -44,7 +44,7 @@ Tu auras besoin de 4 tables. **Les relations entre les tables ne sont pas indiqu
     * `stock` le nombre de produits en stock
     * `price` le prix du produit
     * `picture` l'URL d'une image
-    * `createdAt` date de l'ajout du produit (champ pouvant être indiqué dans le schéma avec le temps courant par défaut, en utilisant `DEFAULT CURRENT_TIMESTAMP`)
+    * `createdAt` date de l'ajout du produit (type `DATETIME` pouvant être indiqué dans le schéma avec le temps courant par défaut, en utilisant `DEFAULT CURRENT_TIMESTAMP`)
 
 * `user` :
 
@@ -55,7 +55,7 @@ Tu auras besoin de 4 tables. **Les relations entre les tables ne sont pas indiqu
 
 * `order` :
 
-    * `date` la date de la commande (type `DATETIME` en MySQL)
+    * `date` la date de la commande (type `DATETIME` en MySQL, sur lequel on peut aussi indiquer `DEFAULT CURRENT_TIMESTAMP`)
 
 * `order_product` :
 
