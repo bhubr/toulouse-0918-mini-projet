@@ -97,7 +97,13 @@ N'oublie pas d'utiliser ESLint !!
 
 ### Configuration ESLint côté front
 
-Ajouter ce bloc dans le `package.json` :
+Remplacer ce bloc du `package.json` :
+
+    "eslintConfig": {
+      "extends": "react-app"
+    },
+
+Par :
 
     "eslintConfig": {
       "extends": "airbnb",
