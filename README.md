@@ -77,7 +77,9 @@ Trois répertoires :
 * `front-public` pour la partie visiteur
 * `front-admin` pour la partie admin
 
-N'oublie pas d'utiliser ESLint !!
+N'oublie pas d'utiliser ESLint !! Pour l'installer en global :
+
+    sudo npm install -g eslint
 
 ## Par où commencer ?
 
