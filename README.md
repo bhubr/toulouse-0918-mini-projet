@@ -24,6 +24,7 @@ Le thème : un site de e-commerce.
 
 **En option**
 
+* En tant qu'administrateur, je veux pouvoir lister les produits
 * En tant qu'administrateur, je veux pouvoir créer/modifier/supprimer une catégorie de produits
 * En tant qu'administrateur, je veux pouvoir attribuer une catégorie à un produit
 * En tant qu'administrateur, je veux pouvoir ajouter une photo au produit (au lieu d'une URL en dur)
@@ -40,6 +41,7 @@ Tu auras besoin de 4 tables. **Les relations entre les tables ne sont pas indiqu
     * `reference`, une référence pour le produit à 6 chiffres, par ex `762874`
     * `slug` le nom du produit "slugifié", concaténation de la marque, du nom, par ex. `asus-moniteur-24-pouces-full-hd-xbz2`
     * `description`, par ex. "Moniteur d'une qualité d'affichage exceptionnelle avec sa résolution de 1920x1080 pixels"
+    * `stock` le nombre de produits en stock
     * `price` le prix du produit
     * `picture` l'URL d'une image
 
