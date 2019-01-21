@@ -44,6 +44,14 @@ Tu auras besoin de 4 tables. **Les relations entre les tables ne sont pas indiqu
     * `stock` le nombre de produits en stock
     * `price` le prix du produit
     * `picture` l'URL d'une image
+    * `createdAt` date de l'ajout du produit (champ pouvant être indiqué dans le schéma avec le temps courant par défaut, en utilisant `DEFAULT CURRENT_TIMESTAMP`)
+
+* `user` :
+
+    * `email`
+    * `password`
+    * `firstname`
+    * `lastname`
 
 * `order` :
 
@@ -70,3 +78,65 @@ Trois répertoires :
 * `front-admin` pour la partie admin
 
 N'oublie pas d'utiliser ESLint !!
+
+## Par où commencer ?
+
+* Créer le repo (sauf si vous forkez celui-ci)
+* Créer les répertoires (à la main pour le back, avec CRA pour les front)
+* Dans les `package.json` des front, ajouter la config ESLint (voir annexes)
+* Dans le back, initialiser ESLint avec `eslint --init`, puis dans les menus, choisir successivement :
+
+    * "Use a popular style guide"
+    * "Airbnb"
+    * N à la question "Do you use React"?
+    * JavaScript
+    * Y à la question "Would you like to install them now with npm?" (installation des dépendances)
+* Après cette initialisation, modifier le fichier `.eslintrc.js` généré automatiquement, pour y mettre ce qu'on trouve en annexes
+
+## Annexes
+
+### Configuration ESLint côté front
+
+Ajouter ce bloc dans le `package.json` :
+
+    "eslintConfig": {
+      "extends": "airbnb",
+      "env": {
+        "browser": true,
+        "jest": true,
+        "serviceworker": true
+      },
+      "rules": {
+        "react/jsx-filename-extension": 0,
+        "react/jsx-one-expression-per-line": 0,
+        "no-underscore-dangle": 0,
+        "no-console": 0,
+        "comma-dangle": 0,
+        "arrow-parens": 0
+      }
+    },
+
+Pour info, on désactive certaines "règles" édictées par AirBnb, comme par exemple :
+
+* le fait de forcer l'extension `.jsx` pour les composants React (`react/jsx-filename-extension`)
+* le fait d'interdire `console.log()` (`no-console`)
+* le fait de forcer les parenthèses autour des paramètres, pour les fonctions fléchées qui n'en attendent qu'un (`arrow-parens`)
+
+### Configuration ESLint côté back
+
+Remplacer le contenu de `.eslintrc` par ceci :
+
+    module.exports = {
+        "extends": "airbnb-base",
+        "env": {
+          "browser": false,
+          "node": true,
+          "jasmine": true
+        },
+        "rules": {
+          "no-console": 0,
+          "comma-dangle": 0,
+          "arrow-parens": 0,
+          "no-restricted-globals": 0
+        }
+    };
