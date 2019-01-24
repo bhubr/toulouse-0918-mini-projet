@@ -25,6 +25,7 @@ Le thème : un site de e-commerce.
 **En option**
 
 * En tant qu'administrateur, je veux pouvoir lister les produits
+* En tant qu'administrateur, je veux pouvoir créer/modifier/supprimer un produit
 * En tant qu'administrateur, je veux pouvoir créer/modifier/supprimer une catégorie de produits
 * En tant qu'administrateur, je veux pouvoir attribuer une catégorie à un produit
 * En tant qu'administrateur, je veux pouvoir ajouter une photo au produit (au lieu d'une URL en dur)
